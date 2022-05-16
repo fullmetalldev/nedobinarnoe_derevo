@@ -61,22 +61,26 @@ function App() {
         document.addEventListener("keypress", clickKey);
     }, []);
 
-    useEffect(()=>{
+    useEffect(() => {
         setState(!state)
     }, [randomNum]);
 
     const showNumbers = (data) => {
-        return <div className="binarNode">
-            {data.left
-                ? <div className="left">{showNumbers(data.left)}</div>
-                : ""
-            }
-            <div className="center">{data.data}</div>
-            {data.right
-                ? <div className="right">{showNumbers(data.right)}</div>
-                : ""
-            }
+        return <div className="center">
+            <span>{data.data}</span>
+            <div className="twosides">
+                {data.left
+                    ? <div className="left">{showNumbers(data.left)}</div>
+                    : ""
+                }
+                {data.right
+                    ? <div className="right">{showNumbers(data.right)}</div>
+                    : ""
+                }
+            </div>
         </div>
+
+
     };
 
     return (

@@ -1,37 +1,72 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body{
-  background: #1d2135;
-}
-.All{
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  top: 50px;
-  color: #ffffff;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
 }
 
-.binarNode{
-  bottom: -50px;
-  position: absolute;
-  display: flex;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  align-items: center;
-  justify-content: center;
+body {
+    background: #1d2135;
 }
 
-.binarNode .left{
-  position: absolute;
-  left: -50px;
+.All {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    color: #ffffff;
+    font-size: 18px;
 }
 
-.binarNode .right{
-  position: absolute;
-  right: -50px;
+
+.center {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.twosides {
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.right {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center span {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: start 0.3s ease;
+}
+
+@keyframes start {
+    0% {
+        font-size: 0;
+        width: 1px;
+        height: 1px;
+    }
+    100% {
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ffffff;
+    }
 }
