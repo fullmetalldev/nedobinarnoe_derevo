@@ -34,7 +34,7 @@ body {
 
 .left {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     margin: 10px;
 }
@@ -42,7 +42,7 @@ body {
 .right {
     margin: 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -70,3 +70,4 @@ body {
         border: 1px solid #ffffff;
     }
 }
+
